@@ -20,9 +20,6 @@ function NavBar(){
               <div className="navbar-item">
                 <h4>Adopt</h4>
               </div>
-              <div className="navbar-item">
-                <h4>About us</h4>
-              </div>
               <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">
                   <figure className="image is-32x32 has-image-centered">

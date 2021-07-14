@@ -16,18 +16,32 @@
     font-family: 'Nanum Brush Script', cursive;
 }
 
-.menu-box{
+.menu-box, .special-box{
     margin-left: 20%;
 }
 
-.menu-items{
+
+.menu-items, .adopt-items{
     font-family: 'Nanum Brush Script', cursive;
 
     text-align: center;
     box-shadow:  none ;
 }
 
+.special-items img{
+    width: 35rem;
+    border-radius: 20px;
+}
+
 .menu-items img{
     height: 15rem;
+    border-radius: 20px;
+}
+.adopt-box{
+    background-color: #faf0ec;
+}
+
+.adopt-items img{
+    width: 15rem;
     border-radius: 20px;
 }
