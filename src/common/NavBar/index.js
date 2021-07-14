@@ -6,11 +6,22 @@ import "./index.css";
 function NavBar(){
     return (
         <nav className="navbar">
-          <div className="navbar-menu has-background-white">
-            <div className="navbar-menu "></div>
+          <div className="navbar-menu has-background-white has-text-black">
+            <div className="navbar-menu ">
+                <img src='logoo.png'></img>
+            </div>
             <div className="navbar-start">
               <div className="navbar-item">
-                {/* <i className="fas fa-bell fa-1x has-text-light is-vcentered"></i> */}
+                <h4>About us</h4>
+              </div>
+              <div className="navbar-item">
+                <h4>Menu</h4>
+              </div>
+              <div className="navbar-item">
+                <h4>Adopt</h4>
+              </div>
+              <div className="navbar-item">
+                <h4>About us</h4>
               </div>
               <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">

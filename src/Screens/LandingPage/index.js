@@ -6,14 +6,33 @@ function Landing(){
 
     return (
       <section>
-          <NavBar />
+        <NavBar />
         <div className="hero hero-container">
-            <div className="banner">
-                <img src='banner.png'></img>
-            </div>
-          <h1 className="title is-3 mt-3">Latest Movies</h1>
+          <div className="banner">
+            <img src="banner.png"></img>
+          </div>
+          <h1 className="title  mt-3 mb-0">Our Menu</h1>
           <hr />
-
+          <div className="columns menu-box is-vcentered">
+            <div className="column is-3">
+              <div className="panel menu-items">
+                <h2>Breakfast</h2>
+                <img src="breakfast.jpeg"></img>
+              </div>
+            </div>
+            <div className="column is-3">
+              <div className="panel menu-items">
+                <h2>Lunch</h2>
+                <img src="lunch.jpeg"></img>
+              </div>
+            </div>
+            <div className="column is-3">
+              <div className="panel menu-items">
+                <h2>Dinner</h2>
+                <img src="dinner.jpeg"></img>
+              </div>
+            </div>
+          </div>
           <div className="columns is-vcentered">
             <div className="column is-half">
               <div className="tile ">

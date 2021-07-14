@@ -12,4 +12,22 @@
 
 .title{
     text-align: center;
+    font-size: 5rem;
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+.menu-box{
+    margin-left: 20%;
+}
+
+.menu-items{
+    font-family: 'Nanum Brush Script', cursive;
+
+    text-align: center;
+    box-shadow:  none ;
+}
+
+.menu-items img{
+    height: 15rem;
+    border-radius: 20px;
 }
