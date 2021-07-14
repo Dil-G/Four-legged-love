@@ -1,0 +1,36 @@
+.login-hero{
+    background-color: #FBECE7;
+  }
+
+  .container{
+    background-color: #FBECE7;
+  }
+
+.img-container{
+ background-color: #FABBBB;
+ border-radius: 10px;
+}
+
+.image{
+    /* margin:5% 0; */
+}
+
+.box-login{
+    background-color:#FABBBB ;
+    border-radius: 10px;
+
+}
+
+.login-form{
+    border-radius: 10px;
+    background-color: #FBECE7;
+
+}
+
+.topline{
+    height: 2px;
+    background-color: black;
+    margin-top: -1.0rem;
+    margin-bottom: 0.5rem;
+
+  }

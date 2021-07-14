@@ -1,0 +1,15 @@
+.banner img{
+    height: 80vh;
+}
+.banner{
+    text-align: center;
+
+}
+
+.hero-container{
+    padding: 0 2em;
+}
+
+.title{
+    text-align: center;
+}
