@@ -1,19 +1,47 @@
-// import axios from "axios";
-import React, { useState, useEffect } from "react";
+import axios from "axios";
+import React, { useState } from "react";
+import { Link, useHistory } from 'react-router-dom';
 import "./index.css";
-// import { useSnackbar } from "notistack";
-// import { useHistory } from "react-router-dom";
+
 
 function Login() {
 
 //   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
-//   const history = useHistory();
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
- 
+
+  const login = async () => {
+    console.log(email + password);
+    if (email !== "" || password !== "") {
+      const loginData = {
+        email: email,
+        password: password,
+      };
+      await axios
+        .post("http://localhost:5000/login", loginData)
+        .then(async (res) => {
+          console.log(res.data.data.email);
+          await localStorage.setItem("authToken", res.data.data.token);
+          await localStorage.setItem("instituteId", res.data.data.instituteId);
+          await localStorage.setItem("userData", JSON.stringify(res.data.data));
+          console.log(res.data.data);
+          // setLoading(false)
+          history.push({
+            pathname: "/",
+            email: res.data.data.email,
+            instituteId: res.data.data.instituteId,
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }
+
   return (
     <section className="hero is-fullheight hero-grey">
       <div className="hero-body login-hero">
@@ -73,7 +101,7 @@ function Login() {
                 <div className="field has-text-centered">
                   <button
                     className="button has-background-dark has-text-white"
-                    // onClick={login}
+                    onClick={login}
                   >
                    
                     <span>Login</span>
