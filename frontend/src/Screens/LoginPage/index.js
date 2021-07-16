@@ -13,7 +13,6 @@ function Login() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-
   const login = async () => {
     console.log(email + password);
     if (email !== "" || password !== "") {
