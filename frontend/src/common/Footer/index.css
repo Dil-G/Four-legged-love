@@ -10,3 +10,9 @@
     background-color: red;
     
 }
+
+h1{
+    margin-bottom: 0.2rem;
+    font-size: larger;
+    font-weight: 600;
+}

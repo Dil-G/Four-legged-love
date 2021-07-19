@@ -83,21 +83,24 @@ useEffect(()=>{
           <hr />
           <div className="columns special-box is-vcentered">
             <div className="column is-3">
+            <h2>Lasagna</h2>
+
               <div className="panel special-items">
-                <h2>Breakfast</h2>
-                <img src="breakfast.jpeg"></img>
+                <img src="lasagna.jpg"></img>
               </div>
             </div>
             <div className="column is-3">
+            <h2>Kottu</h2>
               <div className="panel special-items">
-                <h2>Lunch</h2>
-                <img src="lunch.jpeg"></img>
+                
+                <img src="kottu.jfif"></img>
               </div>
             </div>
             <div className="column is-3">
+            <h2>Pad Thai Noodles</h2>
               <div className="panel special-items">
-                <h2>Dinner</h2>
-                <img src="dinner.jpeg"></img>
+                
+                <img src="padthai.jpg"></img>
               </div>
             </div>
           </div>
