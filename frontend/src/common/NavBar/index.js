@@ -21,23 +21,28 @@ function NavBar(){
                 <h4>Menu</h4>
                 </Link>
               </div>
-              <div className="navbar-item">
+              {/* <div className="navbar-item">
               <Link to="#">
                 <h4>Adopt</h4>
                 </Link>
-              </div>
-              <div className="navbar-item has-dropdown is-hoverable">
-                <a className="navbar-link">
-                  <figure className="image is-32x32 has-image-centered">
-                   
-                  </figure>
-                </a>
-                <div className="navbar-dropdown is-right">
-                  <a className="navbar-item">Profile</a>
-                  <hr className="navbar-divider" />
-                  <a className="navbar-item">Logout</a>
-                </div>
-              </div>
+              </div> */}
+              <div className="navbar-end">
+              <span className="navbar-item">
+                <Link to="../signup">
+                  <a className="button  is-info">
+                    <span>Join our community</span>
+                  </a>
+                </Link>
+              </span>
+              <span className="navbar-item">
+                <Link to="../login">
+                  <a className="button is-info">
+                    <span>Login </span>
+                  </a>
+                </Link>
+              </span>
+            </div>
+
             </div>
           </div>
         </nav>

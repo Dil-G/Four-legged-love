@@ -49,11 +49,16 @@ function Signup() {
     <section className="hero is-fullheight hero-grey">
       <div className="hero-body register-hero">
         <div className="container">
+          
           <div className="columns is-centered">
+            
             <div className="column is-5-tablet is--desktop is-7-widescreen">
+              
               <form className="box p-5">
-                <div className="topline"></div>
-                <h1 className="title is-3 text-color topline1 has-text-left">
+              Four legged love is a community to raise awareness and encourage adoption
+<br/>Join us!
+                <h1 className="title is-3 mt-3 text-color topline1 has-text-left">
+
                   Sign up
                 </h1>
 
@@ -149,13 +154,15 @@ function Signup() {
                   </div>
                 </div>
                 <div className="field has-text-centered">
-                  <button className="button primary-color-bg has-text-white" onClick={signup} type="button">
+                  <button className="button mr-3 primary-color-bg has-text-black is-outlined" onClick={signup} type="button">
+
                     <span className="icon">
                       <i className="fa fa-sign-in-alt is-white"></i>
                     </span>
                     <span>Sign up</span>
                   </button>
-                  <Link to="/landing">
+                  <Link to="/">
+
                     <button className="button is-danger has-text-white">
                       <span>Cancel</span>
                     </button>

@@ -56,7 +56,6 @@ function Login() {
                 <h1 className="title is-3 text-color topline1 has-text-left">
                   Four Legged Love
                 </h1>
-                <div className="topline"></div>
 
                 {error && (
                   <p className="error-block">
@@ -99,12 +98,18 @@ function Login() {
                 </div>
                 <div className="field has-text-centered">
                   <button
+                    className="button mr-3 has-background-white has-text-black is-otlined"
                     className="button has-background-dark has-text-white"
                     onClick={login}
                   >
                    
                     <span>Login</span>
                   </button>
+                  <Link to="/">
+                    <button className="button is-danger has-text-white">
+                      <span>Cancel</span>
+                    </button>
+                  </Link>
                 </div>
                 </div>
                 </div>
