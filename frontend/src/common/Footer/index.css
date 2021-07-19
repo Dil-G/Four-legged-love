@@ -1,0 +1,18 @@
+.footer{
+    margin: 2% 0;
+    text-align: center;
+    /* background-color: transparent; */
+    /* height: 2vh; */
+
+}
+.hero-footer{
+    height: 2vh;
+    background-color: red;
+    
+}
+
+h1{
+    margin-bottom: 0.2rem;
+    font-size: larger;
+    font-weight: 600;
+}

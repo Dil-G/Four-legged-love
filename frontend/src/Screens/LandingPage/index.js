@@ -1,15 +1,37 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./index.css";
 import NavBar from '../../common/NavBar'
 
 function Landing(){
 
+useEffect(()=>{
+  var options = {
+    method: 'GET',
+    url: 'https://cafe-cookies.p.rapidapi.com/',
+    headers: {
+      'x-rapidapi-key': '0ef80a8648mshb4d6079d53b8f89p17c1c1jsnc97afd6c24a4',
+      'x-rapidapi-host': 'cafe-cookies.p.rapidapi.com'
+    }
+  };
+  
+  axios.request(options).then(function (response) {
+    console.log(JSON.stringify(response.data.data));
+  }).catch(function (error) {
+    console.error(error);
+  });
+},[])
+
+
     return (
       <section>
         <NavBar />
         <div className="hero hero-container">
-          <div className="banner">
-            <img src="banner.png"></img>
+          <div className="banner is-hidden-mobile">
+            <img src="banner.png" />
+            <figcaption>
+              Meet Sally
+            </figcaption>
           </div>
           <h1 className="title  mt-3 mb-0">Our Menu</h1>
           <hr />
@@ -61,172 +83,31 @@ function Landing(){
           <hr />
           <div className="columns special-box is-vcentered">
             <div className="column is-3">
+            <h2>Lasagna</h2>
+
               <div className="panel special-items">
-                <h2>Breakfast</h2>
-                <img src="breakfast.jpeg"></img>
+                <img src="lasagna.jpg"></img>
               </div>
             </div>
             <div className="column is-3">
+            <h2>Kottu</h2>
               <div className="panel special-items">
-                <h2>Lunch</h2>
-                <img src="lunch.jpeg"></img>
+                
+                <img src="kottu.jfif"></img>
               </div>
             </div>
             <div className="column is-3">
+            <h2>Pad Thai Noodles</h2>
               <div className="panel special-items">
-                <h2>Dinner</h2>
-                <img src="dinner.jpeg"></img>
+                
+                <img src="padthai.jpg"></img>
               </div>
             </div>
           </div>
 
-          <div className="columns is-vcentered">
-            <div className="column is-half">
-              <div className="tile ">
-                <div className="box">
-                  <a href="movie.html">
-                    <figure className="image is-128x128">
-                      <img src="images/91WNnQZdybL._AC_SL1500_.jpg" />
-                    </figure>
-                  </a>
-                </div>
-
-                <h2 className="title is-3">Title 1</h2>
-              </div>
-            </div>
-            <div className="column is-half">
-              <div className="tile">
-                <div className="box">
-                  <a>
-                    <figure className="image is-128x128 is-inline-block">
-                      <img src="images/avengers-endgame-original-movie-poster-15x21-in-2019-anthony-russo-robert-downey-jr.jpg" />
-                    </figure>
-                  </a>
-                </div>
-                <p>
-                  Hello World Second level Curabitur accumsan turpis pharetra
-                  augue tincidunt blandit. Quisque condimentum maximus mi, sit
-                  amet commodo arcu rutrum id. Proin pretium urna vel cursus
-                  venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus
-                  dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column is-half">
-              <div className="tile">
-                <div className="box">
-                  <a>
-                    <figure className="image is-128x128">
-                      <img src="images/parasite-film-tribute-1.jpg" />
-                    </figure>
-                  </a>
-                </div>
-                <p>
-                  Hello World Second level Curabitur accumsan turpis pharetra
-                  augue tincidunt blandit. Quisque condimentum maximus mi, sit
-                  amet commodo arcu rutrum id. Proin pretium urna vel cursus
-                  venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus
-                  dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.
-                </p>
-              </div>
-            </div>
-            <div className="column is-half">
-              <div className="tile">
-                <div className="box">
-                  <a>
-                    <figure className="image is-128x128">
-                      <img src="images/unnamed (5).jpg" />
-                    </figure>
-                  </a>
-                </div>
-                <p>
-                  Hello World Second level Curabitur accumsan turpis pharetra
-                  augue tincidunt blandit. Quisque condimentum maximus mi, sit
-                  amet commodo arcu rutrum id. Proin pretium urna vel cursus
-                  venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus
-                  dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <h1 className="title is-3">Reccomendations</h1>
-          <hr />
-
-          <div className="columns is-vcentered">
-            <div className="column is-half">
-              <div className="tile">
-                <div className="box">
-                  <a>
-                    <figure className="image is-128x128">
-                      <img src="images/91WNnQZdybL._AC_SL1500_.jpg" />
-                    </figure>
-                  </a>
-                </div>
-
-                <br />
-                <h2 className="title is-3">Title 1</h2>
-              </div>
-            </div>
-            <div className="column is-half">
-              <div className="tile">
-                <div className="box">
-                  <a>
-                    <figure className="image is-128x128 is-inline-block">
-                      <img src="images/avengers-endgame-original-movie-poster-15x21-in-2019-anthony-russo-robert-downey-jr.jpg" />
-                    </figure>
-                  </a>
-                </div>
-                <p>
-                  Hello World Second level Curabitur accumsan turpis pharetra
-                  augue tincidunt blandit. Quisque condimentum maximus mi, sit
-                  amet commodo arcu rutrum id. Proin pretium urna vel cursus
-                  venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus
-                  dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column is-half">
-              <div className="tile">
-                <div className="box">
-                  <a>
-                    <figure className="image is-128x128">
-                      <img src="images/parasite-film-tribute-1.jpg" />
-                    </figure>
-                  </a>
-                </div>
-                <p>
-                  Hello World Second level Curabitur accumsan turpis pharetra
-                  augue tincidunt blandit. Quisque condimentum maximus mi, sit
-                  amet commodo arcu rutrum id. Proin pretium urna vel cursus
-                  venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus
-                  dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.
-                </p>
-              </div>
-            </div>
-            <div className="column is-half">
-              <div className="tile">
-                <div className="box">
-                  <a>
-                    <figure className="image is-128x128">
-                      <img src="images/unnamed (5).jpg" />
-                    </figure>
-                  </a>
-                </div>
-                <p>
-                  Hello World Second level Curabitur accumsan turpis pharetra
-                  augue tincidunt blandit. Quisque condimentum maximus mi, sit
-                  amet commodo arcu rutrum id. Proin pretium urna vel cursus
-                  venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus
-                  dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.
-                </p>
-              </div>
-            </div>
-          </div>
+          
+         
+         
         </div>
       </section>
     );

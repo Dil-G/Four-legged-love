@@ -5,6 +5,7 @@ import Signup from "./Screens/SignupPage";
 // import Footer from "./common/Footer";
 import User from "./Screens/UserView";
  
+import Footer from "./common/Footer";
 // import { GuardProvider, GuardedRoute } from "react-router-guards";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -29,14 +30,19 @@ function App() {
 
     return (
       <div className="app">
-        { <Router>
+        <div className="contect wrap">
+        <Router>
           {/* <GuardProvider> */} 
             <Route path="/login" exact component={Login} />
             <Route path="/" exact component={Landing} />
             <Route path="/signup" exact component={Signup} />
             <Route path="/user" exact component={User} />
+
           {/* { </GuardProvider> */}
-        </Router> }
+        </Router> 
+        </div>
+      
+        <Footer />
       </div>
     );
 
